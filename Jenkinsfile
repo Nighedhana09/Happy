@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh'cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/'
+                sh'cp -r ${/var/lib/jenkins/workspace/Happy-Project}/build/ /var/www/jenkins-angular-app/'
             }
         }
     }
