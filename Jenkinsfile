@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh "npm install"
-                sh "npm run build"
+                "npm install"
+                "npm run build"
             }
         }
         stage('Test') {
@@ -17,8 +17,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh "rm -rf /var/www/jenkins-angular-app"
-                sh "cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/"
+                 "rm -rf /var/www/jenkins-angular-app"
+                 "cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/"
             }
         }
     }
