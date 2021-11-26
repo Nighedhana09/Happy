@@ -19,8 +19,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                 sh'rm -rf /var/www/jenkins-angular-app'
-                 sh'cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/'
+                sh'cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/'
             }
         }
     }
