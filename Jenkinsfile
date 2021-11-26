@@ -17,7 +17,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh "sudo rm -rf /var/www/jenkins-react-app"
+                sh "sudo rm -rf /var/www/jenkins-angular-app"
                 sh "sudo cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/"
             }
         }
