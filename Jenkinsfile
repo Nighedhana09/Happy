@@ -2,11 +2,13 @@ pipeline {
     agent any
 
     stages {
+      stage('Install') {
+      steps { sh 'npm install' }
+    
         stage('Build') {
             steps {
                 echo 'Building..'
-                "npm install"
-                "npm run build"
+                sh'npm run build'
             }
         }
         stage('Test') {
@@ -17,8 +19,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                 "rm -rf /var/www/jenkins-angular-app"
-                 "cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/"
+                 sh'rm -rf /var/www/jenkins-angular-app'
+                 sh'cp -r ${WORKSPACE}/build/ /var/www/jenkins-angular-app/'
             }
         }
     }
