@@ -18,7 +18,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'sudo rm -rf /usr/share/nginx/html'
+                //sh 'sudo rm -rf /usr/share/nginx/html'
                 sh'cp -r ${/var/lib/jenkins/workspace/Happy-Project}/build/ /usr/share/nginx/html'
             }
         }
