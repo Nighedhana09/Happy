@@ -9,7 +9,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-              sh "sudo cp -r ${/var/lib/jenkins/workspace/Happy-Project}/build/  /usr/share/nginx/html"
+              sh "sudo cp -r ${/var/lib/jenkins/workspace/Happy-Project}/build/ /var/www/example.com/"
             }
         }
     }
