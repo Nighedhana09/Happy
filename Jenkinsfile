@@ -10,6 +10,7 @@ pipeline {
         stage("Deploy") {
             steps {
              echo  "deployed"
+             sh"cp-r ${/var/lib/jenkins/workspace/Happy-Project} /usr/share/nginx/html"
             }
         }
     }
