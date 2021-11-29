@@ -10,7 +10,7 @@ pipeline {
         stage("Deploy") {
             steps {
              echo  "deployed"
-             sh"cp-r ${/var/lib/jenkins/workspace/Happy-Project} /usr/share/nginx/html"
+             sh"rsync -a /var/lib/jenkins/workspace/Happy-Project /var/www/angular-cicd"
             }
         }
     }
